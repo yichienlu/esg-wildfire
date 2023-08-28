@@ -36,19 +36,15 @@ const { value: contactAddress, attrs: contactAddressAttrs } = register('contactA
 
   const submitForm = ()=>{
     formSubmitted.value = true
-
     fetch(scriptURL, { method: 'POST', body: new FormData(contactForm.value)})
       .then(response => {
         emit('submitForm')
-        // emit('closeForm')
-
         console.log('Success!', response);
 
       })
       .catch(error => console.error('Error!', error.message))
   }
   /*google sheets end */
-
 
   let formSubmitted = ref(false)
 </script>

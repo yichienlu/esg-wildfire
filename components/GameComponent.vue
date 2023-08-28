@@ -31,8 +31,8 @@
 
 
   onMounted(()=>{
-    nuxtStorage.localStorage.removeItem('twhg_esg-wildfire')
-    nuxtStorage.localStorage.setData('twhg_esg-wildfire', '[0,1,1,1,1,1,1,1,1,false]', 3,'m')
+    // nuxtStorage.localStorage.removeItem('twhg_esg-wildfire')
+    // nuxtStorage.localStorage.setData('twhg_esg-wildfire', '[1,1,1,1,1,1,1,1,1,false]', 3,'m')
     local_collection.value = JSON.parse(nuxtStorage.localStorage.getData('twhg_esg-wildfire')) || [0,0,0,0,0,0,0,0,0,false]
   })
 
