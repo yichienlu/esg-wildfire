@@ -75,7 +75,7 @@ const scrollToTop =() => {
       </div>
     </div>
 
-    <img src="./assets/images/esg-bg.png" alt="" class="w-full bg-black mb-10 ">
+    <img src="/images/esg-bg.png" alt="" class="w-full bg-black mb-10 ">
 
     <!-- 水平滾動 -->
     <div ref="horizontal" class="horizontal" @wheel="preventScroll">
@@ -249,7 +249,7 @@ const scrollToTop =() => {
           <ul class="grid lg:grid-cols-3 gap-4">
             <li class="relative rounded-[24px] bg-lime-100 shadow-md p-8 w-full sm:w-2/3 md:w-1/2 lg:w-full mx-auto bezier duration-300 hover:scale-[102%] hover:shadow-xl hover:rotate-2">
               <div class="absolute top-2 left-4 text-6xl lg:text-7xl text-lime-700 Bricolage">1</div>
-              <img src="./assets/images/firefighter-start.png" alt="" class="h-24 mx-auto">
+              <img src="/images/firefighter-start.png" alt="" class="h-24 mx-auto">
               <h3 class="text-2xl font-bold my-4 border-l-4 border-lime-700 px-2">參與救援任務</h3>
               <!-- <h3 class="text-2xl font-bold my-4 border-l-4 border-lime-700 px-2">登入參與救援任務</h3> -->
               <p class="text-lg">參加救援任務，學習ESG小知識。</p>
@@ -258,15 +258,15 @@ const scrollToTop =() => {
             <li class="relative rounded-[24px] bg-lime-100 shadow-md p-8 w-full sm:w-2/3 md:w-1/2 lg:w-full mx-auto bezier duration-300 hover:scale-[102%] hover:shadow-xl hover:rotate-2">
               <div class="absolute top-2 left-4 text-6xl lg:text-7xl text-lime-700 Bricolage">2</div>
               <div class="flex h-24 justify-center items-center">
-                <img src="./assets/images/hose.png" alt="" class="h-2/3 -rotate-12 translate-x-1/4 -translate-y-2">
-                <img src="./assets/images/med.png" alt="" class="h-2/3 rotate-6 -translate-x-1/4 translate-y-2">
+                <img src="/images/hose.png" alt="" class="h-2/3 -rotate-12 translate-x-1/4 -translate-y-2">
+                <img src="/images/med.png" alt="" class="h-2/3 rotate-6 -translate-x-1/4 translate-y-2">
               </div>
               <h3 class="text-2xl font-bold my-4 border-l-4 border-lime-700 px-2">滅火、救援</h3>
               <p class="text-lg">在任務中選擇以水柱撲滅火苗或使用急救箱救援動物。</p>
             </li>
             <li class="relative rounded-[24px] bg-lime-100 shadow-md p-8 w-full sm:w-2/3 md:w-1/2 lg:w-full mx-auto bezier duration-300 hover:scale-[102%] hover:shadow-xl hover:rotate-2">
               <div class="absolute top-2 left-4 text-6xl lg:text-7xl text-lime-700 Bricolage">3</div>
-              <img src="./assets/images/animals/1.png" alt="" class="h-24 mx-auto">
+              <img src="/images/animals/1.png" alt="" class="h-24 mx-auto">
               <h3 class="text-2xl font-bold my-4 border-l-4 border-lime-700 px-2">圖鑑換好禮</h3>
               <p class="text-lg">集齊森林中的8種動物，達成抽好禮資格。
                 </p>
@@ -284,7 +284,7 @@ const scrollToTop =() => {
             <ul class="flex flex-col lg:flex-row justify-evenly items-center text-white">
               <li id="prize1" class="sm:flex justfy-center items-center lg:block mb-8 sm:mb-0">
                 <div class="w-48 h-48 sm:w-64 sm:h-64 bg-white rounded-[50%] shadow-inner-lg ">
-                  <img src="./assets/images/prize1.png" alt="" id="prize1-photo" class="duration-300 bezier">
+                  <img src="/images/prize1.png" alt="" id="prize1-photo" class="duration-300 bezier">
                 </div>
                 <div class="h-24 sm:w-64  flex justfy-center items-center">
                   <div class="mx-auto text-center">
@@ -302,7 +302,7 @@ const scrollToTop =() => {
                   </div>
                 </div>
                 <div class="w-48 h-48 sm:w-64 sm:h-64 bg-white rounded-[50%] shadow-inner-lg flex justify-center items-center">
-                  <img src="./assets/images/prize2.png"  alt="" id="prize2-photo" class="relative h-full bezier duration-300">
+                  <img src="/images/prize2.png"  alt="" id="prize2-photo" class="relative h-full bezier duration-300">
                 </div>
               </li>
             </ul>
@@ -314,19 +314,19 @@ const scrollToTop =() => {
     <GameComponent />
 
     <!-- 活動辦法 -->
-    <div class="py-20 px-3 bg-bottom bg-no-repeat" style="background-image: url('../assets/images/forest.png');">
+    <div class="py-20 px-3 bg-bottom bg-no-repeat" style="background-image: url('/images/forest.png');">
       <div class="container mx-auto text-lg">
         <h2 class="h2 text-center bg-no-repeat bg-center px-5 md:px-10 text-orange-800 text-[28px] md:text-4xl tracking-[2px] md:tracking-[4px] leading-[50px] md:leading-[60px] font-bold mb-4">
           活動辦法
         </h2>
         <div class="border-lime-600 border-2 rounded p-4 md:p-8 bg-[#FFFD]">
           <h3 class="flex text-xl font-bold mb-2">
-            <img src="./assets/images/sprout.png" alt="" class="object-contain h-6 mr-2">
+            <img src="/images/sprout.png" alt="" class="object-contain h-6 mr-2">
             <span class="text-orange-600">活動期間：</span>
           </h3>
           <p class=" pl-8">2023/09/01 ~ 2023/12/31</p>
           <h3 class="flex text-xl font-bold mt-4 mb-2">
-            <img src="./assets/images/sprout.png" alt="" class="object-contain h-6 mr-2">
+            <img src="/images/sprout.png" alt="" class="object-contain h-6 mr-2">
             <span class="text-orange-600">遊戲規則：</span>
           </h3>
           <ol class="list-decimal pl-8">
@@ -339,7 +339,7 @@ const scrollToTop =() => {
           </ol>
 
           <h3 class="flex text-xl font-bold mt-4 mb-2">
-            <img src="./assets/images/sprout.png" alt="" class="object-contain h-6 mr-2">
+            <img src="/images/sprout.png" alt="" class="object-contain h-6 mr-2">
             <span class="text-orange-600">獎品領取辦法及活動注意事項：</span>
           </h3>
           <ol class="list-decimal pl-8">
@@ -358,10 +358,10 @@ const scrollToTop =() => {
 
     <footer class="bg-orange-500 p-4 text-center">
       <div class="flex mb-2 justify-center">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=https://www.twhg.com.tw/esg/index.php" target="_blank" class="me-2">
+        <a href="http://www.facebook.com/sharer/sharer.php?u=https://www.twhg.com.tw/esg/esgtree/esgtree_game.php" target="_blank" class="me-2">
           <img src="https://www.twhg.com.tw/esg/esgtree/images/icon_202x54_1.png" alt="" width="140">
         </a>
-        <a href="">
+        <a href="https://lineit.line.me/share/ui?url=https://www.twhg.com.tw/esg/esgtree/esgtree_game.php">
           <img src="https://www.twhg.com.tw/esg/esgtree/images/icon_202x54_2.png" alt="" width="140">
         </a>
       </div>
@@ -378,43 +378,43 @@ const scrollToTop =() => {
 </template>
 <style>
 #slide1 {
-  background-image:linear-gradient(#0000 70%, #000F),url('./assets/images/intro1.png');
+  background-image:linear-gradient(#0000 70%, #000F),url('/images/intro1.png');
   background-size: cover;
   background-position: bottom;
 }
 #slide2 {
   background-image: 
   linear-gradient(90deg, #0008 20%, #0000 50%),
-  linear-gradient(#0000 80%, #000F), url('./assets/images/fox.png');
+  linear-gradient(#0000 80%, #000F), url('/images/fox.png');
   background-size: cover;
   background-position:bottom 30% right 30%;
 }
 #slide3 {
   background-color:#000;
-  background-image:linear-gradient(#0000 95%, #000F),url('./assets/images/intro2.png');
+  background-image:linear-gradient(#0000 95%, #000F),url('/images/intro2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position:bottom center;
 }
 #slide4 {
   background-color:#000;
-  background-image:linear-gradient(#0000 70%, #000F),url('./assets/images/kid.jpg');
+  background-image:linear-gradient(#0000 70%, #000F),url('/images/kid.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position:bottom 30% right 30%;
 }
 
 .h2 {
-  background-image: url('./assets/images/forest5.png');
+  background-image: url('/images/forest-h2.png');
   background-size: contain;
 }
 
 #game-intro {
   background-image: 
-    url('./assets/images/trees2.png'),
-    url('./assets/images/trees1.png'),
-    url('./assets/images/curve-up.png'), 
-    url('./assets/images/curve-down.png')
+    url('/images/trees2.png'),
+    url('/images/trees1.png'),
+    url('/images/curve-up.png'), 
+    url('/images/curve-down.png')
     ;
   background-size:  
     30%, 
@@ -508,13 +508,13 @@ section {
 }
 
 #section1 {
-  background-image: linear-gradient(#FFFF, #FFFA 30%, #FFF8 50%, #FFFA 70%, #FFFF),url('./assets/images/wildfire-map-left.png');
+  background-image: linear-gradient(#FFFF, #FFFA 30%, #FFF8 50%, #FFFA 70%, #FFFF),url('/images/wildfire-map-left.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
 }
 #section2 {
-  background-image: linear-gradient(#FFFF, #FFFA 30%, #FFF8 50%, #FFFA 70%, #FFFF),url('./assets/images/wildfire-map-right.png');
+  background-image: linear-gradient(#FFFF, #FFFA 30%, #FFF8 50%, #FFFA 70%, #FFFF),url('/images/wildfire-map-right.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;

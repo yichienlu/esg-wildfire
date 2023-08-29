@@ -1,6 +1,6 @@
 <script setup>
   import nuxtStorage from 'nuxt-storage';
-  import { infos } from '../assets/infos.json'
+  import { infos } from '@/src/infos.json'
 
   const expired = ref(Date.now() > 1704038400000 ? true : false) // 2024/01//01 00:00:00
   // https://timestamp.online/
@@ -244,20 +244,20 @@
             'run3':item.location=='run3', 
             } " :data-num="index" :data-object="item.objectNum? 'fire': item.animalNum">
             <div v-if="item.objectNum">
-              <img v-if="item.success" src="../assets/images/sprout.png" alt="" class="w-16 md:w-20">
-              <img v-else src="../assets/images/fire.png" alt="" class="w-16 md:w-20">
+              <img v-if="item.success" src="/images/sprout.png" alt="" class="w-16 md:w-20">
+              <img v-else src="/images/fire.png" alt="" class="w-16 md:w-20">
             </div>
             <div v-else>
-              <img v-if="item.success" src="../assets/images/heart.png" alt="" class="w-16 md:w-20">
+              <img v-if="item.success" src="/images/heart.png" alt="" class="w-16 md:w-20">
               <template v-else>
-                <img v-if="item.animalNum==0" src="../assets/images/animals/0.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==1" src="../assets/images/animals/1.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==2" src="../assets/images/animals/2.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==3" src="../assets/images/animals/3.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==4" src="../assets/images/animals/4.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==5" src="../assets/images/animals/5.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==6" src="../assets/images/animals/6.png" alt="" class="w-16 md:w-20">
-                <img v-else-if="item.animalNum==7" src="../assets/images/animals/7.png" alt="" class="w-16 md:w-20">
+                <img v-if="item.animalNum==0" src="/images/animal-0.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==1" src="/images/animal-1.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==2" src="/images/animal-2.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==3" src="/images/animal-3.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==4" src="/images/animal-4.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==5" src="/images/animal-5.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==6" src="/images/animal-6.png" alt="" class="w-16 md:w-20">
+                <img v-else-if="item.animalNum==7" src="/images/animal-7.png" alt="" class="w-16 md:w-20">
               </template>
             </div>
 
@@ -266,10 +266,10 @@
 
         <!-- 消防員 -->
         <div class="absolute top-1/3 left-[10%] sm:left-[20%] h-1/4 ">
-          <img class="h-full" :class="{'hidden':firefighter_status != 'start'}" src="../assets/images/firefighter-start.png" alt="">
-          <img class="h-full running" :class="{'hidden':firefighter_status != 'run'}" src="../assets/images/firefighter-run.png" alt="">
-          <img class="h-full" :class="{'hidden':firefighter_status != 'water'}" src="../assets/images/firefighter-water.png" alt="">
-          <img class="h-full" :class="{'hidden':firefighter_status != 'rescue'}" src="../assets/images/firefighter-rescue.png" alt="">
+          <img class="h-full" :class="{'hidden':firefighter_status != 'start'}" src="/images/firefighter-start.png" alt="">
+          <img class="h-full running" :class="{'hidden':firefighter_status != 'run'}" src="/images/firefighter-run.png" alt="">
+          <img class="h-full" :class="{'hidden':firefighter_status != 'water'}" src="/images/firefighter-water.png" alt="">
+          <img class="h-full" :class="{'hidden':firefighter_status != 'rescue'}" src="/images/firefighter-rescue.png" alt="">
           <div class="result font-bold">{{ result }}</div>
         </div>
         
@@ -329,13 +329,13 @@
                 <p class="py-1">氧氣含量</p>
               </div>
               <div class="flex md:block md:mx-4">
-                <img src="../assets/images/animals/1.png" alt="" class="w-8 md:w-20 me-4 md:mx-auto object-contain">
+                <img src="/images/animal-1.png" alt="" class="w-8 md:w-20 me-4 md:mx-auto object-contain">
                 <p class="py-1">
                   您拯救了{{collection[0]+collection[1]+collection[2]+collection[3]+collection[4]+collection[5]+collection[6]+collection[7]}}隻動物
                 </p>
               </div>
               <div class="flex md:block">
-                <img src="../assets/images/sprout.png" alt="" class="w-8 md:w-20 me-4 md:mx-auto object-contain">
+                <img src="/images/sprout.png" alt="" class="w-8 md:w-20 me-4 md:mx-auto object-contain">
                 <p class="py-1">您種下了{{collection[8]}}棵樹苗</p>
               </div>
             </div>
@@ -366,28 +366,28 @@
           <div id="collection" class="w-11/12 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3 ">
             <ul class=" grid grid-cols-4 gap-2 md:gap-4 ">
               <li class="">
-                <img src="../assets/images/animals/0.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[0]==0 && collection[0] == 0}">
+                <img src="/images/animal-0.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[0]==0 && collection[0] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/1.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[1]==0 && collection[1] == 0}">
+                <img src="/images/animal-1.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[1]==0 && collection[1] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/2.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[2]==0 && collection[2] == 0}">
+                <img src="/images/animal-2.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[2]==0 && collection[2] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/3.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[3]==0 && collection[3] == 0}">
+                <img src="/images/animal-3.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[3]==0 && collection[3] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/4.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[4]==0 && collection[4] == 0}">
+                <img src="/images/animal-4.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[4]==0 && collection[4] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/5.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[5]==0 && collection[5] == 0}">
+                <img src="/images/animal-5.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[5]==0 && collection[5] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/6.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[6]==0 && collection[6] == 0}">
+                <img src="/images/animal-6.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[6]==0 && collection[6] == 0}">
               </li>
               <li class="">
-                <img src="../assets/images/animals/7.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[7]==0 && collection[7] == 0}">
+                <img src="/images/animal-7.png" alt="" class="rounded border-4 border-orange-500 bg-white w-full shadow" :class="{'grayscale':local_collection[7]==0 && collection[7] == 0}">
               </li>
             </ul>
           </div>
@@ -405,7 +405,7 @@
     <!-- 小知識 -->
     <div v-show="info_shown" id="info" class="fixed inset-0 p-2 flex justify-center items-center z-20 bg-[#000E]">
       <div class="relative w-full sm:w-9/12 md:w-6/12 lg:5/12 xl:w-4/12 2xl:w-3/12 p-2 md:p-4 bg-white drop-shadow-2xl rounded-lg border-4 border-white">
-        <h2 class="text-center text-3xl p-2 font-bold bg-[url('../assets/images/forest5.png')] bg-bottom bg-no-repeat bg-contain text-lime-800">小知識</h2>
+        <h2 class="text-center text-3xl p-2 font-bold bg-bottom bg-no-repeat bg-contain text-lime-800">小知識</h2>
         <p id="info-content" class="p-4 text-xl">{{ info_content }}</p>
         <button id="infoCloseBtn" type="button" class="absolute top-0 end-0 p-2 text-orange-600 hover:text-gray-200 rounded" @click="closeInfo">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
@@ -480,19 +480,19 @@
   animation: bg_image 60s linear 0s infinite;
 }
 .bg-image1 {
-  background-image: url('../assets/images/1-1.png'), url('../assets/images/1-1.png');
+  background-image: url('/images/1-1.png'), url('/images/1-1.png');
 }
 .bg-image2 {
-  background-image: url('../assets/images/1-2.png'), url('../assets/images/1-2.png');
+  background-image: url('/images/1-2.png'), url('/images/1-2.png');
 }
 .bg-image3 {
-  background-image: url('../assets/images/1-3.png'), url('../assets/images/1-3.png');
+  background-image: url('/images/1-3.png'), url('/images/1-3.png');
 }
 .bg-image4 {
-  background-image: url('../assets/images/1-4.png'), url('../assets/images/1-4.png');
+  background-image: url('/images/1-4.png'), url('/images/1-4.png');
 }
 .bg-image5 {
-  background-image: url('../assets/images/1-5.png'), url('../assets/images/1-5.png');
+  background-image: url('/images/1-5.png'), url('/images/1-5.png');
 }
 @keyframes bg_image {
   0%{
@@ -528,13 +528,13 @@
 }
 
 #waterBtn {
-  background-image:url('../assets/images/hose.png');
+  background-image:url('/images/hose.png');
 }
 #medBtn {
-  background-image: url('../assets/images/med.png');
+  background-image: url('/images/med.png');
 }
 #info h2{
-  background-image: url('../assets/images/forest5.png');
+  background-image: url('/images/forest-h2.png');
 }
 
 
